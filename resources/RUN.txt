@@ -1,1 +1,13 @@
 Output: 
+How many countries do you want to add to the list?
+2
+List of countries: 
+first: null
+middle: null
+last: null
+
+What country do you want to search for?
+usa
+Country usa not found.
+
+Done with TestCountryList.
