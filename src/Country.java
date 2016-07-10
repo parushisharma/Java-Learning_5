@@ -33,6 +33,10 @@ public class Country  {
 	 *  @param  countryData 			The passed data values specific to the country
 	 */
  
+	public Country(String countryNameToFind) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public void addSubscriptionYear(int year, double countryData) {
 		SubscriptionYear years = new SubscriptionYear(year,countryData);
 		this.subscriptions[this.c] = years; 
