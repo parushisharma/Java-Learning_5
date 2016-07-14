@@ -45,9 +45,7 @@ public class CountryList {
 				current = current.getNext();
 				
 			} 
-			current.setNext(add) ;
-		
-		
+			current.setNext(add) ;		
 		}
 	}
 	
@@ -87,8 +85,13 @@ public class CountryList {
 	 */
 	public String toString(){
 		String result = "";
-		return result;
 		
+		CountryNode current = this.node;
+		while(current != null) {
+			result += current.getData() + "\n";
+			current = current.getNext();
+		}
+		return result;
 	} 
 
 }
