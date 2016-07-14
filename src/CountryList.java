@@ -71,11 +71,11 @@ public class CountryList {
 		CountryNode tmp = new CountryNode(tmpCountry);
 		CountryNode curr = this.node;
 		while (curr.getNext() != null) {
-			if (this.node != tmp) {
-				return null;
+			if (this.node == tmp) {
+				return tmpCountry;
 			} 	
-		}
-		return tmpCountry;
+		} 
+		return null;
 	}
 	
 	/*
