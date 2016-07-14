@@ -46,7 +46,7 @@ public class TestCountryList
 			// TODO: Define the add() method in class such that it adds the randomly
 			// selected Country to the end of the list.
 			selectedCountries.add(allCountries[selectedIndex]);
-			System.out.println(allCountries[selectedIndex]);
+		
 		}
 
 
