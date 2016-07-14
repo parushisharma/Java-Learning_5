@@ -3,7 +3,7 @@ public class CountryNode {
 	private Country country;
 	private CountryNode next;
 	
-	/*
+	/**
 	 * Constructor that takes in the object of type Country 
 	 * @param 	c					The name of the country 
 	 */
@@ -12,7 +12,7 @@ public class CountryNode {
 		this.next = null; 
 	}
 	
-	/*
+	/**
 	 * Constructor that takes in two parameters, an object of type 
 	 * Country and an object of type CountryNode.
 	 * @param 	x
@@ -24,7 +24,7 @@ public class CountryNode {
 		
 	}
 	
-	/*
+	/**
 	 * Getter method for Country 
 	 * @return 		country 		The name of the country 
 	 */
@@ -32,7 +32,7 @@ public class CountryNode {
 		return country;
 	}
 
-	/*
+	/**
 	 * Getter method for CountryNode 
 	 * @return 	next 		The next country Node 
 	 */
@@ -40,7 +40,7 @@ public class CountryNode {
 		return next;
 	}
 	
-	/*
+	/**
 	 * Setter method for next 
 	 * @param 	next 		The next country Node 
 	 */
