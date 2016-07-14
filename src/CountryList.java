@@ -15,6 +15,7 @@ public class CountryList {
 	/**
 	 * A method that gets the country based on the index. 
 	 * @param 		index 			The index of that you want 
+	 * @return		Country			the name of the country at the index
 	 */
 	public Country getIndex(int index) {
 		CountryNode current = this.node;
@@ -52,6 +53,7 @@ public class CountryList {
 	
 	/**
 	 * A method that returns the size of the list
+	 * @return		size 			The size of the list 
 	 */
 	public int size() {
 		int size = 0;
@@ -66,6 +68,7 @@ public class CountryList {
 	/**
 	 * A method that checks if the name of the country can be found in the list.
 	 * @param 	tmpCountry			the name of the country/object that you want to find.
+	 * @return	Country 			the name of the country or null if the country is not found
 	 */
 	public Country contains(Country tmpCountry) {
 		CountryNode tmp = new CountryNode(tmpCountry);
@@ -80,7 +83,7 @@ public class CountryList {
 	
 	/**
 	 * A method that returns a string containing information about every country in the list.
-	 * 
+	 * @return		string 				The result 
 	 */
 	public String toString(){
 		String result = "";
