@@ -54,8 +54,13 @@ public class CountryList {
 	 * A method that returns the size of the list
 	 */
 	public int size() {
-		
-		return 0;
+		int size = 0;
+		CountryNode CurrNode = this.node;
+			while(CurrNode.getNext() != null) {
+				CurrNode = CurrNode.getNext();
+				size++;
+			}
+		return size;
 	}
 	
 	/*
@@ -63,8 +68,14 @@ public class CountryList {
 	 * @param 	tmpCountry			the name of the country/object that you want to find.
 	 */
 	public Country contains(Country tmpCountry) {
-		
-		return null;
+		CountryNode tmp = new CountryNode(tmpCountry);
+		CountryNode curr = this.node;
+		while (curr.getNext() != null) {
+			if (this.node != tmp) {
+				return null;
+			} 	
+		}
+		return tmpCountry;
 	}
 	
 	/*
