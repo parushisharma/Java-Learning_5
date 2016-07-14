@@ -10,6 +10,7 @@ public class Country  {
 
 	// Instance variable fields that are private to the user. 
 	private String name;
+	private String countryName;
 	private  SubscriptionYear[] subscriptions;
 	private  int c;
 	
@@ -44,7 +45,9 @@ public class Country  {
 	 * Method acts as a constructor that will be used to create a temporary Country 
 	 * object that has the information about the name of the Country given. 
 	 */
-	public Country(String countryNameToFind) {
+	public Country(String countryNameToFind) { 
+			// how is this different from the constructor that we made above? 
+		this.countryName = countryNameToFind;
 		
 	}
 
@@ -59,14 +62,15 @@ public class Country  {
 	public double getNumSubscriptionsForPeriod(int syear, int eyear) {
 		double subscription = 0;
 		
+		if(syear > eyear || eyear > subscriptions[subscriptions.length-1].getYear()) {
+			return -1;
+		} 
+		
+		
 	    for (int i = 0; i < subscriptions.length ; i++ ) {
 	    	if (subscriptions[i].getYear() >= syear && subscriptions[i].getYear() <= eyear) {
 	    		subscription = subscriptions[i].getSubscription() + subscription;
-	    	} else {
-                //returns Error message and sets the running sum to -1 
-                System.out.println("ERROR: Problem with the years input");
-                subscription = -1;
-                }
+	    	} 
 	    }
 		return subscription;
 	}

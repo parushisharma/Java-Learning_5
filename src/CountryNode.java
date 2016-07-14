@@ -7,8 +7,9 @@ public class CountryNode {
 	 * Constructor that takes in the object of type Country 
 	 * @param 	c					The name of the country 
 	 */
-	public void first (Country c) {
-		
+	public CountryNode (Country country) {
+		this.country = country;
+		this.next = null; 
 	}
 	
 	/*
@@ -17,7 +18,9 @@ public class CountryNode {
 	 * @param 	x
 	 * @param 	object 
 	 */
-	public void second(Country x , CountryNode object) {
+	public CountryNode (Country nameOfCountry , CountryNode node) {
+		this.next = node;
+		this.country = nameOfCountry;
 		
 	}
 	
