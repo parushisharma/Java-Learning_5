@@ -1,4 +1,4 @@
-/*
+/**
  * This class creates methods and nodes that will be used by CountryList.
  */
 public class CountryNode {
@@ -8,7 +8,7 @@ public class CountryNode {
 	
 	/**
 	 * Constructor that takes in the object of type Country 
-	 * @param 	c					The name of the country 
+	 * @param 	country					The name of the country 
 	 */
 	public CountryNode (Country country) {
 		this.country = country;
@@ -18,8 +18,8 @@ public class CountryNode {
 	/**
 	 * Constructor that takes in two parameters, an object of type 
 	 * Country and an object of type CountryNode.
-	 * @param 	x
-	 * @param 	object 
+	 * @param 	nameOfCountry				Name of the Country object 
+	 * @param 	node 						A node of type CountryNode
 	 */
 	public CountryNode (Country nameOfCountry , CountryNode node) {
 		this.next = node;

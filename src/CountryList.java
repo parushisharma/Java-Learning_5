@@ -4,9 +4,13 @@
  */
 
 public class CountryList {
-	
+	// Instances that are private to the user 
 	private CountryNode node; 
 	
+	/**
+	 * Constructor that sets up the node. 
+	 * 
+	 */
 	public CountryList () {
 		this.node = null;
 	}
