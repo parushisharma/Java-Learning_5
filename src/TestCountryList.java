@@ -98,6 +98,19 @@ public class TestCountryList
 		System.out.println ("first: " + first);
 		System.out.println ("middle: " + middle);
 		System.out.println ("last: " + last);
+		
+		// Test cases
+		int indextest = 1;
+		Country firsttest = selectedCountries.getIndex(indextest);
+		index = selectedCountries.size()/2;
+		Country middletest = selectedCountries.getIndex(indextest);
+		index = selectedCountries.size()-1;
+		Country lasttest = selectedCountries.getIndex(indextest);
+
+		// Print out the results from above getIndex operations
+		System.out.println ("first Test : " + firsttest);
+		System.out.println ("middle Test : " + middletest);
+		System.out.println ("last Test : " + lasttest);
 
 
 		// Check if the name of a country is in the list.
@@ -129,6 +142,9 @@ public class TestCountryList
 		// TODO: At minimum include a test for each case of inserting to the 
 		//      front, middle and end of the list.
 		//
+		// Note: To debug specific elements of your list, do not comment this line out
+				
+
 	}
 
 	/**
@@ -192,7 +208,7 @@ public class TestCountryList
 		// Note: Initially, to test your output you may hard code the number of 
 		//       countries added, and the array positions selected.
 		//		 However, make sure to comment this out before submitting your work.
-		application.debugListOfCountries(countries);
+		//application.debugListOfCountries(countries);
 
 		
 		// Tests the CountryLinkedList class by adding a random number of entries

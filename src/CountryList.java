@@ -37,7 +37,6 @@ public class CountryList {
 	 * @param 	country			The country object you want to add.
 	 */
 	public void add(Country country) {
-		System.out.println("adding: " + country);
 		if( this.node == null) {
 		CountryNode first = new CountryNode(country);
 		this.node = first;

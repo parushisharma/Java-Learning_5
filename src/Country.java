@@ -1,4 +1,4 @@
-/*
+/**
  * This class creates new SubscriptionYear objects and saves them
  * in an array. It also takes a starting and ending year that it 
  * pulls out the average subscriptions of. 
@@ -10,11 +10,10 @@ public class Country  {
 
 	// Instance variable fields that are private to the user. 
 	private String name;
-	//private String countryName;
 	private  SubscriptionYear[] subscriptions;
 	private  int c;
 	
-	/*
+	/**
 	 * This method is a Constructor that takes in the country name and number of years. 
 	 * @param country 				The name of the country 
 	 * @param numberOfYears			The integer of the number of years 
@@ -26,7 +25,7 @@ public class Country  {
 	    this.c = 0;
 	}
 	
-	/*
+	/**
 	 *  Method that takes in the year, and a single subscription
 	 *  It creates a new SubscriptionYear object and that object 
 	 *  is saved in the subscriptions array
@@ -41,19 +40,17 @@ public class Country  {
 		this.subscriptions[this.c] = years; 
 		this.c++;
 	}
-	/*
+	/**
 	 * Method acts as a constructor that will be used to create a temporary Country 
 	 * object that has the information about the name of the Country given. 
 	 */
 	public Country(String countryNameToFind) { 
-			// how is this different from the constructor that we made above?
-		System.out.println("creating: " + countryNameToFind);
 		this.name = countryNameToFind;
 		subscriptions = new SubscriptionYear[0];
 		
 	}
 
-	/*
+	/**
 	 * Method that takes in the starting year and the ending year
 	 * returns the total number of subscriptions between the two years
 	 * @param 	syear						The integer value of the starting year
@@ -77,7 +74,7 @@ public class Country  {
 		return subscription;
 	}
 	
-	/*
+	/**
 	 *  Method which returns a representation of the country 
 	 *  @return 			The string and the subscriptions 
 	 */
@@ -95,7 +92,7 @@ public class Country  {
 	    return result;
 	}
 	
-	/*
+	/**
 	 * This method returns countryName
 	 * @return 				The name of the country 
 	 */
@@ -103,7 +100,7 @@ public class Country  {
 	    return this.name;
 	}
 	 
-	/*
+	/**
 	 * This method checks to see if the array is null
 	 * @return 			If the array is empty or not. 
 	 */  
