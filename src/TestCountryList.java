@@ -100,11 +100,11 @@ public class TestCountryList
 		System.out.println ("last: " + last);
 		
 		// Test cases
-		int indextest = 1;
+		int indextest = 2;
 		Country firsttest = selectedCountries.getIndex(indextest);
-		index = selectedCountries.size()/2;
+		indextest = selectedCountries.size()/2;
 		Country middletest = selectedCountries.getIndex(indextest);
-		index = selectedCountries.size()-1;
+		indextest = selectedCountries.size()-1;
 		Country lasttest = selectedCountries.getIndex(indextest);
 
 		// Print out the results from above getIndex operations
