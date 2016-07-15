@@ -22,6 +22,35 @@ public class TestCountryList
 		// TODO: Use this method to debug a subset of the input file data.
 		// Note: The implementation of method is optional.
 		//       The purpose is to help you debug
+		CountryList list = new CountryList();
+		//list.getIndex(0);
+		if(list.getIndex(0) == null) {
+			System.out.println("null");
+		}
+		list.add(allCountries[0]);
+		System.out.println(allCountries[0]);
+		System.out.println(list.getIndex(0));
+		
+		
+		System.out.println(list.contains(allCountries[0]));
+		
+		list.add(allCountries[1]);
+		System.out.println(allCountries[1]);
+		System.out.println(list.getIndex(1));
+		
+		System.out.println(list.contains(allCountries[1]));
+		list.add(allCountries[2]);
+		System.out.println(allCountries[2]);
+		System.out.println(list.getIndex(2));
+		
+		String s = "example 1";
+		Country country = new Country(s);
+		System.out.print("country is: ");
+		System.out.println(country.getName()==null);
+		list.add(country);
+		System.out.println(list.contains(country));
+		
+		//System.out.println(list.getIndex(1));
 	}
 
 	/**
@@ -30,6 +59,7 @@ public class TestCountryList
 	 */
 	private void testRandomListOfCountries(Country [] allCountries)
 	{
+		
 		// Prompts the user for the number of countries they want to add to the list.
 		Scanner keyboard = new Scanner(System.in);
 		System.out.println("How many countries do you want to add to the list?");
@@ -108,6 +138,8 @@ public class TestCountryList
 	 */
 	public static void main(String[] args)
 	{
+		
+		
 		// TODO: Make sure to test yoru implementation with different input data files.
 		final String FILENAME = "resources/cellular.csv";	// Directory path for Mac OS X
 		//final String FILENAME = "resources\\cellular.csv";	// Directory path for Windows OS (i.e. Operating System)
@@ -160,8 +192,9 @@ public class TestCountryList
 		// Note: Initially, to test your output you may hard code the number of 
 		//       countries added, and the array positions selected.
 		//		 However, make sure to comment this out before submitting your work.
-		//application.debugListOfCountries(countries);
+		application.debugListOfCountries(countries);
 
+		
 		// Tests the CountryLinkedList class by adding a random number of entries
 		// from the array of Country objects.
 		application.testRandomListOfCountries(countries);

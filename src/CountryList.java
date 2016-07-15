@@ -19,6 +19,9 @@ public class CountryList {
 	 */
 	public Country getIndex(int index) {
 		CountryNode current = this.node;
+		if(current == null) {
+			return null;
+		}
 		
 		for (int i = 0; i < index ; i++) {
 			if (current != null && current.getNext() == null ) {
@@ -34,6 +37,7 @@ public class CountryList {
 	 * @param 	country			The country object you want to add.
 	 */
 	public void add(Country country) {
+		System.out.println("adding: " + country);
 		if( this.node == null) {
 		CountryNode first = new CountryNode(country);
 		this.node = first;
@@ -56,7 +60,7 @@ public class CountryList {
 	public int size() {
 		int size = 0;
 		CountryNode CurrNode = this.node;
-			while(CurrNode.getNext() != null) {
+			while(CurrNode != null) {
 				CurrNode = CurrNode.getNext();
 				size++;
 			}
@@ -69,12 +73,14 @@ public class CountryList {
 	 * @return	Country 			the name of the country or null if the country is not found
 	 */
 	public Country contains(Country tmpCountry) {
-		CountryNode tmp = new CountryNode(tmpCountry);
+		//CountryNode tmp = new CountryNode(tmpCountry);
 		CountryNode curr = this.node;
-		while (curr.getNext() != null) {
-			if (this.node == tmp) {
-				return tmpCountry;
+		while (curr != null) {
+			
+			if (curr.getCountry().getName().equals(tmpCountry.getName())) {
+				return curr.getCountry();	
 			} 	
+			curr = curr.getNext();
 		} 
 		return null;
 	}
@@ -88,7 +94,7 @@ public class CountryList {
 		
 		CountryNode current = this.node;
 		while(current != null) {
-			result += current.getData() + "\n";
+			result += current.getCountry() + "\n";
 			current = current.getNext();
 		}
 		return result;

@@ -10,7 +10,7 @@ public class Country  {
 
 	// Instance variable fields that are private to the user. 
 	private String name;
-	private String countryName;
+	//private String countryName;
 	private  SubscriptionYear[] subscriptions;
 	private  int c;
 	
@@ -46,8 +46,10 @@ public class Country  {
 	 * object that has the information about the name of the Country given. 
 	 */
 	public Country(String countryNameToFind) { 
-			// how is this different from the constructor that we made above? 
-		this.countryName = countryNameToFind;
+			// how is this different from the constructor that we made above?
+		System.out.println("creating: " + countryNameToFind);
+		this.name = countryNameToFind;
+		subscriptions = new SubscriptionYear[0];
 		
 	}
 
